@@ -133,6 +133,15 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               </p>
             ))}
         </div>
+        {state.message ? (
+          <div
+            id="message-error"
+            aria-live="polite"
+            className="mt-2 text-sm text-red-500"
+          >
+            <p key={state.message}>{state.message}</p>
+          </div>
+        ) : null}
       </div>
       <div className="mt-6 flex justify-end gap-4">
         <Link
